@@ -11,6 +11,8 @@
     <div id="coin"> Pritisni gumb za met kovanca </div>
     <input type="text" name="" id="vrednost">
     <button onclick="btnClick()" type="button">FLIP!</button>
+    <div></div>
+    <img id="coinImg" src="">
 
 </body>
 
@@ -30,6 +32,7 @@
             success: function (result) {
                console.log(result)
                divCoin.innerHTML = result.status
+               document.getElementById("coinImg").src = result.img
                
             }
         });

@@ -16,6 +16,10 @@ def coinData():
    # print(request.args["vrednost"])
     rnd = random.randint(0,1)
     status = ["HEADS", "TAILS"][rnd]
-    return {"img" : "url", "status" : status}
+    if status == "HEADS":
+        url = "https://i.postimg.cc/CBNJNfDJ/head.png"
+    else:
+        url = "https://i.postimg.cc/zysdXN8w/tail.png"
+    return {"img" : url, "status" : status}
 
 app.run(debug = True)
